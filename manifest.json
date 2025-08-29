@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Text Collector",
+  "version": "1.2",
+  "description": "Collect selected text into a collection panel",
+  "permissions": ["storage", "contextMenus", "scripting", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html" },
+  "options_page": "collection.html",
+  "commands": {
+    "save-selection": {
+      "suggested_key": { "default": "Ctrl+Q" },
+      "description": "Save selected text to collection"
+    }
+  }
+}
